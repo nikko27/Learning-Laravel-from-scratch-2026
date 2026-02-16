@@ -40,7 +40,3 @@ Route::middleware('guest')->group(function () {
     Route::post('/login', [SessionsController::class, 'store']);
 });
 
-Route::get('/admin', function () {
-    Gate::authorize('view-admin');
-   return 'Private admin area.';
-});
